@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Kursus Pembinaan Item</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <span class="navbar-icon">📋</span>
+      <span class="navbar-title">Dashboard Kursus Pembinaan Item</span>
+    </div>
+    <button class="navbar-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    <ul class="navbar-links" id="navLinks">
+      <li><a href="#kehadiran">Kehadiran</a></li>
+      <li><a href="#objektif">Objektif</a></li>
+      <li><a href="#subjek">Subjek</a></li>
+      <li><a href="#penggubal">Penggubal</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Kursus Pembinaan Item</h1>
+      <p>Sistem Pengurusan & Pemantauan Kursus Pembinaan Item Penilaian</p>
+      <div class="hero-badges">
+        <span class="badge">📅 20–22 November 2026</span>
+        <span class="badge">📍 Hotel Marriott, Putrajaya</span>
+        <span class="badge">🏛️ Lembaga Peperiksaan Malaysia</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+
+    <!-- ═══════════════════════════════════════
+         SEKSYEN 1: KEHADIRAN PESERTA
+    ═══════════════════════════════════════ -->
+    <section id="kehadiran" class="section">
+      <div class="section-header">
+        <h2>🧑‍💼 Kehadiran Peserta Kursus</h2>
+        <p class="section-desc">Rekod kehadiran peserta bagi setiap sesi kursus</p>
+      </div>
+
+      <div class="kehadiran-grid">
+        <!-- Carta + Ringkasan -->
+        <div class="carta-wrapper">
+          <div class="chart-container">
+            <canvas id="cartaKehadiran"></canvas>
+          </div>
+          <div class="kehadiran-stats" id="kehadiranStats"></div>
+        </div>
+
+        <!-- Jadual Peserta -->
+        <div class="table-wrapper">
+          <table class="data-table" id="jadualPeserta">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Nama Peserta</th>
+                <th>Jawatan</th>
+                <th>Sesi 1</th>
+                <th>Sesi 2</th>
+                <th>Sesi 3</th>
+                <th>Jumlah Hadir</th>
+              </tr>
+            </thead>
+            <tbody id="jadualPesertaBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SEKSYEN 2: OBJEKTIF KURSUS
+    ═══════════════════════════════════════ -->
+    <section id="objektif" class="section section-alt">
+      <div class="section-header">
+        <h2>🎯 Objektif Kursus</h2>
+        <p class="section-desc">Maklumat am dan objektif utama kursus pembinaan item</p>
+      </div>
+
+      <div class="info-kursus" id="infoKursus"></div>
+
+      <div class="objektif-grid" id="objektifGrid"></div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SEKSYEN 3: SENARAI SUBJEK
+    ═══════════════════════════════════════ -->
+    <section id="subjek" class="section">
+      <div class="section-header">
+        <h2>📚 Senarai Subjek Ditawarkan</h2>
+        <p class="section-desc">Subjek-subjek yang terlibat dalam kursus pembinaan item ini</p>
+      </div>
+
+      <div class="subjek-grid" id="gridSubjek"></div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SEKSYEN 4: PENGGUBAL ITEM
+    ═══════════════════════════════════════ -->
+    <section id="penggubal" class="section section-alt">
+      <div class="section-header">
+        <h2>✍️ Senarai Penggubal Item</h2>
+        <p class="section-desc">Senarai penggubal item mengikut subjek</p>
+      </div>
+
+      <div class="turas-wrapper">
+        <span class="turas-label">Tapis mengikut subjek:</span>
+        <div class="turas-buttons" id="turasSubjek"></div>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="data-table" id="jadualPenggubal">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama Penggubal</th>
+              <th>Institusi / Organisasi</th>
+              <th>Subjek</th>
+              <th>Bilangan Item Dibina</th>
+            </tr>
+          </thead>
+          <tbody id="jadualPenggubalBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p><strong>Dashboard Kursus Pembinaan Item</strong></p>
+      <p>Lembaga Peperiksaan Malaysia &nbsp;|&nbsp; 20–22 November 2026 &nbsp;|&nbsp; Putrajaya</p>
+      <p class="footer-copy">© 2026 Lembaga Peperiksaan Malaysia. Hak Cipta Terpelihara.</p>
+    </div>
+  </footer>
+
+  <!-- BUTANG KE ATAS -->
+  <button class="btn-ke-atas" id="btnKeAtas" title="Ke Atas">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
